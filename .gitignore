@@ -1,0 +1,16 @@
+@"
+venv/
+update/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.dll
+*.so
+*.dylib
+.DS_Store
+.ipynb_checkpoints/
+.env
+.vscode/
+.idea/
+"@ | Out-File -Encoding utf8 .gitignore
