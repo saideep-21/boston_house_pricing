@@ -3,7 +3,7 @@ import pickle
 from flask import Flask, request, jsonify,app,url_for,render_template
 import numpy as np
 import pandas as pd
-
+import os
 
 app = Flask(__name__)
 # Load the trained model
@@ -35,5 +35,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
-    
+    port = int(os.environ.get("PORT", 8000))
+    app.run(host="0.0.0.0", port=port)  
